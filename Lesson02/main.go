@@ -4,7 +4,9 @@ package main
 //Import more than libraries
 import (
 	"fmt"
-	"net/http"
+
+	//making Alias
+	foo "net/http"
 )
 
 // Function
@@ -15,7 +17,8 @@ func main() {
 
 	//Get response
 	// := [It shows if the variables does not exist make them]
-	resp, err := http.Get("https://jsonplaceholder.typicode.com/posts/1/")
+	// We should use the name of Alias of the library
+	resp, err := foo.Get("https://jsonplaceholder.typicode.com/posts/1/")
 
 	//if Condition => Error Handling
 	if err != nil {
